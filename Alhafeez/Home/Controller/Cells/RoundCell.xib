@@ -19,11 +19,10 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XoM-HX-yAj">
                         <rect key="frame" x="0.0" y="0.0" width="246" height="158"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1584382947_114_139695_" translatesAutoresizingMaskIntoConstraints="NO" id="VS0-WK-Njd">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1111" translatesAutoresizingMaskIntoConstraints="NO" id="VS0-WK-Njd">
                                 <rect key="frame" x="8" y="7" width="230" height="87"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="230" id="wqP-u5-W1t"/>
-                                    <constraint firstAttribute="height" constant="87" id="wqV-4c-thA"/>
+                                    <constraint firstAttribute="height" constant="87" id="PIi-Ex-qZG"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sdwddddddddddddddddddddddddddddddddddddddddddd" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7L1-YB-PCV">
@@ -61,6 +60,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="1584382947_114_139695_" width="106" height="106"/>
+        <image name="1111" width="106" height="106"/>
     </resources>
 </document>

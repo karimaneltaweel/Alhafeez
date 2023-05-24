@@ -62,48 +62,25 @@ extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource{
             switch indexPath.section{
             case 0:
                 let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier:"HeaderController", for: indexPath) as! HeaderController
-                    return header
+                return header
+            case 1:
                 
-         //   case 1:
-
-//                let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier:"title", for: indexPath) as! HeaderSections
-//                    return header
-            case 2:
-                let headerView = collectionView.dequeueReusableSupplementaryView(
-                    ofKind: kind,
-                    withReuseIdentifier: "HeaderController",
-                    for: indexPath)
-                guard let typedHeaderView = headerView as? HeaderController
-                else { return headerView }
-                typedHeaderView.searchView.isHidden = true
-                typedHeaderView.searchBar.isHidden = true
-                typedHeaderView.button.isHidden = true
-                typedHeaderView.titleLabel.text = "Real estate for rent"
-                return typedHeaderView
-            case 3:
-                let headerView = collectionView.dequeueReusableSupplementaryView(
-                    ofKind: kind,
-                    withReuseIdentifier: "HeaderController",
-                    for: indexPath)
-                guard let typedHeaderView = headerView as? HeaderController
-                else { return headerView }
-                typedHeaderView.searchView.isHidden = true
-                typedHeaderView.searchBar.isHidden = true
-                typedHeaderView.button.isHidden = true
-                typedHeaderView.titleLabel.text = "Real estate for rent"
-                
-                return typedHeaderView
+                let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier:"\(SectionHeader.self)", for: indexPath) as! SectionHeader
+                header.sectionTitle.text = "Daily Rental"
+                return header
+//            case 2:
+//                let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier:\(SectionHeader.self), for: indexPath) as! SectionHeader
+//                header.sectionTitle.text = "Real estate for sale"
+//                return header
+//            case 3:
+//                let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier:"SectionHeader", for: indexPath) as! SectionHeader
+//                header.sectionTitle.text = "Real estate for rent"
+//                
+//                return header
             default:
-                let headerView = collectionView.dequeueReusableSupplementaryView(
-                    ofKind: kind,
-                    withReuseIdentifier: "HeaderController",
-                    for: indexPath)
-                guard let typedHeaderView = headerView as? HeaderController
-                else { return headerView }
-                typedHeaderView.searchView.isHidden = true
-                typedHeaderView.searchBar.isHidden = true
-                typedHeaderView.button.isHidden = true
-                return typedHeaderView
+                let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier:"\(SectionHeader.self)", for: indexPath) as! SectionHeader
+                header.sectionTitle.text = ""
+                return header
             }
             
         default:
@@ -111,6 +88,6 @@ extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource{
         }
         
     }
-
+    
 }
 

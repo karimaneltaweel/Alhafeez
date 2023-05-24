@@ -12,10 +12,6 @@ class SaleRentCell: UICollectionViewCell {
     @IBOutlet weak var saleRentImage: UIImageView!
     @IBOutlet weak var saleRentPrice: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
     func setUp(cell:DataForCell){
         
         saleRentImage.image = cell.image

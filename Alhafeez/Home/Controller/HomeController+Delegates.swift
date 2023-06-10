@@ -63,23 +63,25 @@ extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource{
             case 0:
                 let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier:"HeaderController", for: indexPath) as! HeaderController
                 return header
-            case 1:
-                
-                let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier:"\(SectionHeader.self)", for: indexPath) as! SectionHeader
-                header.sectionTitle.text = "Daily Rental"
-                return header
+//            case 1:
+//
+//                let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier:"\(SectionHeader.self)", for: indexPath) as! SectionHeader
+//                header.addSubview(labelText(text: "Daily Rental"))
+//                return header
 //            case 2:
-//                let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier:\(SectionHeader.self), for: indexPath) as! SectionHeader
-//                header.sectionTitle.text = "Real estate for sale"
+//                let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier:"SectionHeader", for: indexPath) as! SectionHeader
+//                header.addSubview(labelText(text: "real estate for sale"))
 //                return header
 //            case 3:
 //                let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier:"SectionHeader", for: indexPath) as! SectionHeader
-//                header.sectionTitle.text = "Real estate for rent"
-//                
+//                header.addSubview(labelText(text: "real estate for rent"))
 //                return header
             default:
-                let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier:"\(SectionHeader.self)", for: indexPath) as! SectionHeader
-                header.sectionTitle.text = ""
+                
+                let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier:"SectionHeader", for: indexPath) as! SectionHeader
+//                header.addSubview(labelText(text: "Daily Rental"))
+//                header.sectionTitle.text = "ssddd"
+                header.title = "hghg"
                 return header
             }
             
@@ -87,6 +89,24 @@ extension HomeController: UICollectionViewDelegate, UICollectionViewDataSource{
             assert(false, "Invalid element type")
         }
         
+    }
+    
+    public func collectionView(_:UICollectionView, layout: UICollectionViewLayout, referenceSizeForHeaderInSection: Int) -> CGSize
+    {
+        if referenceSizeForHeaderInSection > 0 {
+            return CGSize.zero
+        }
+        return CGSize(width:0, height:100)
+    }
+    
+    
+    func labelText(text:String)->UILabel{
+        let label = UILabel(frame: CGRect(x: 10, y: 0, width: 200, height: 21))
+        label.textAlignment = .left
+        label.font = .boldSystemFont(ofSize: 17)
+        label.text = text
+        let header = collectionView
+        return label
     }
     
 }

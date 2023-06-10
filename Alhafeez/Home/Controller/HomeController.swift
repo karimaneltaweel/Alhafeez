@@ -16,9 +16,12 @@ class HomeController: UIViewController {
         collectionView.collectionViewLayout = createLayout()
         collectionView.register(UINib(nibName: "RoundCell", bundle: nil), forCellWithReuseIdentifier: "RoundCell")
         collectionView.register(UINib(nibName: "SaleRentCell", bundle: nil), forCellWithReuseIdentifier: "SaleRentCell")
-//        collectionView.register(SectionHeader.self, forSupplementaryViewOfKind: "Header", withReuseIdentifier:"SectionHeader")
-
+        
+        collectionView.register(SectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "SectionHeader")
+        
     }
+    
+    
     
     //MARK: -LAYOUT
     func createLayout() -> UICollectionViewCompositionalLayout{
@@ -40,8 +43,8 @@ class HomeController: UIViewController {
         
     }
     
-     func supplementaryHeaderItem() -> NSCollectionLayoutBoundarySupplementaryItem {
-            .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .estimated(50)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
+    func supplementaryHeaderItem(height:CGFloat) -> NSCollectionLayoutBoundarySupplementaryItem {
+            .init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .estimated(height)), elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
         }
 
 }

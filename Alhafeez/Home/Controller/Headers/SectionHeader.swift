@@ -9,6 +9,16 @@ import UIKit
 
 class SectionHeader: UICollectionReusableView {
 
-    @IBOutlet weak var sectionTitle: UILabel!
+    
+    @IBOutlet weak var sectionTitle: UILabel! {
+        didSet{
+            self.configureTitle()
+        }
+    }
+    var title: String?
+    
+    func configureTitle() {
+        self.sectionTitle.text = title
+    }
     
 }

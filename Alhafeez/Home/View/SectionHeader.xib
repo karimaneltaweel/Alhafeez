@@ -3,7 +3,6 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,7 +17,7 @@
                     <rect key="frame" x="283" y="0.0" width="90" height="44"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="90" id="3ji-70-o3t"/>
-                        <constraint firstAttribute="height" constant="44" id="5qA-Q4-ai3"/>
+                        <constraint firstAttribute="height" constant="44" id="adb-02-gvc"/>
                     </constraints>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain">
@@ -33,12 +32,12 @@
                         <color key="baseForegroundColor" name="PrimaryColor"/>
                     </buttonConfiguration>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Real estate for sale" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZK7-B2-qLp">
-                    <rect key="frame" x="0.0" y="10" width="232" height="18"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Real estate for sale" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCj-zL-7kD">
+                    <rect key="frame" x="0.0" y="10" width="230" height="18"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="232" id="Ks4-Gv-yHu"/>
+                        <constraint firstAttribute="width" constant="230" id="eqs-NJ-gSe"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -46,12 +45,16 @@
             <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="ZK7-B2-qLp" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="10" id="Dl8-Md-STC"/>
                 <constraint firstItem="27L-Vf-Eo1" firstAttribute="trailing" secondItem="VXr-Tz-HHm" secondAttribute="trailing" id="Kc0-Eh-V95"/>
                 <constraint firstItem="27L-Vf-Eo1" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="XYZ-M3-9pJ"/>
-                <constraint firstItem="ZK7-B2-qLp" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="zF8-aj-JvP"/>
+                <constraint firstAttribute="bottom" secondItem="27L-Vf-Eo1" secondAttribute="bottom" id="Z7v-n1-UVg"/>
+                <constraint firstItem="aCj-zL-7kD" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="10" id="aWC-jJ-E2u"/>
+                <constraint firstItem="aCj-zL-7kD" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="bbA-Fy-nc2"/>
             </constraints>
-            <point key="canvasLocation" x="170.22900763358777" y="-14.788732394366198"/>
+            <connections>
+                <outlet property="sectionTitle" destination="aCj-zL-7kD" id="QKu-4c-aUU"/>
+            </connections>
+            <point key="canvasLocation" x="57" y="1"/>
         </collectionReusableView>
     </objects>
     <resources>
